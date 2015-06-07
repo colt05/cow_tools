@@ -2,6 +2,7 @@ package com.me.ctools;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -29,13 +30,53 @@ public class CowTools
     {
     	LanguageRegistry.addName(cs, "Cow Sword");
     	GameRegistry.registerItem(cs, "Cow Sword", CowTools.MODID);
+    	GameRegistry.addShapedRecipe(new ItemStack(cs, 1), 
+    			" L ",
+    			" L ",
+    			" S ",
+    			'L',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(334),
+    			'S',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(280));
     	LanguageRegistry.addName(cp, "Cow Pickaxe");
     	GameRegistry.registerItem(cp, "Cow Pickaxe", CowTools.MODID);
+    	GameRegistry.addShapedRecipe(new ItemStack(cp, 1), 
+    			"LLL",
+    			" S ",
+    			" S ",
+    			'L',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(334),
+    			'S',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(280));
     	LanguageRegistry.addName(ch, "Cow Hoe");
     	GameRegistry.registerItem(ch, "Cow Hoe", CowTools.MODID);
+    	GameRegistry.addShapedRecipe(new ItemStack(ch, 1), 
+    			" LL",
+    			" S ",
+    			" S ",
+    			'L',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(334),
+    			'S',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(280));
     	LanguageRegistry.addName(ca, "Cow Axe");
     	GameRegistry.registerItem(ca, "Cow Axe", CowTools.MODID);
+    	GameRegistry.addShapedRecipe(new ItemStack(ca, 1), 
+    			" LL",
+    			" LL",
+    			" S ",
+    			'L',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(334),
+    			'S',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(280));
     	LanguageRegistry.addName(ce, "Cow Shovel");
     	GameRegistry.registerItem(ce, "Cow Shovel", CowTools.MODID);
+    	GameRegistry.addShapedRecipe(new ItemStack(ce, 1), 
+    			" L ",
+    			" S ",
+    			" S ",
+    			'L',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(334),
+    			'S',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(280));
 	}
 }
