@@ -18,7 +18,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class CowTools
 {
     public static final String MODID = "cowtools";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "0.2";
     public static ToolMaterial cow = EnumHelper.addToolMaterial("Cow", 3, 90, 2.0F, 5, 4);
     public static CowSword cs = (CowSword) new com.me.ctools.CowSword(cow).setTextureName("cowtools:cow_sword").setUnlocalizedName("csword").setCreativeTab(net.minecraft.creativetab.CreativeTabs.tabCombat);
     public static CowPickaxe cp = (CowPickaxe) new com.me.ctools.CowPickaxe(cow).setTextureName("cowtools:cow_pickaxe").setUnlocalizedName("cpick").setCreativeTab(net.minecraft.creativetab.CreativeTabs.tabTools);
