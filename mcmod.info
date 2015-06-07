@@ -1,0 +1,16 @@
+[
+{
+  "modid": "cowtools",
+  "name": "Cow Tools",
+  "description": "Sources: http://www.minecraftforge.net/wiki/Tutorial:_Create_your_Toolset, http://www.minecraftforge.net/wiki/Icons_and_Textures, EsvDefCon",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Me"],
+  "credits": "GitHub/Curse for hosting",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
