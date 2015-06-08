@@ -1,6 +1,8 @@
 package com.me.ctools;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
@@ -18,13 +20,14 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class CowTools
 {
     public static final String MODID = "cowtools";
-    public static final String VERSION = "0.2";
+    public static final String VERSION = "0.3";
     public static ToolMaterial cow = EnumHelper.addToolMaterial("Cow", 3, 90, 2.0F, 5, 4);
     public static CowSword cs = (CowSword) new com.me.ctools.CowSword(cow).setTextureName("cowtools:cow_sword").setUnlocalizedName("csword").setCreativeTab(net.minecraft.creativetab.CreativeTabs.tabCombat);
     public static CowPickaxe cp = (CowPickaxe) new com.me.ctools.CowPickaxe(cow).setTextureName("cowtools:cow_pickaxe").setUnlocalizedName("cpick").setCreativeTab(net.minecraft.creativetab.CreativeTabs.tabTools);
     public static CowHoe ch = (CowHoe) new com.me.ctools.CowHoe(cow).setTextureName("cowtools:cow_hoe").setUnlocalizedName("choe").setCreativeTab(net.minecraft.creativetab.CreativeTabs.tabTools);
     public static CowAxe ca = (CowAxe) new com.me.ctools.CowAxe(cow).setTextureName("cowtools:cow_axe").setUnlocalizedName("caxe").setCreativeTab(net.minecraft.creativetab.CreativeTabs.tabTools);
     public static CowSpade ce = (CowSpade) new com.me.ctools.CowSpade(cow).setTextureName("cowtools:cow_shovel").setUnlocalizedName("cshovel").setCreativeTab(net.minecraft.creativetab.CreativeTabs.tabTools);
+    public static CowStone ct = (CowStone) new com.me.ctools.CowStone().setCreativeTab(net.minecraft.creativetab.CreativeTabs.tabBlock);
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
@@ -78,5 +81,19 @@ public class CowTools
     			net.minecraft.item.Item.itemRegistry.getObjectById(334),
     			'S',
     			net.minecraft.item.Item.itemRegistry.getObjectById(280));
+    	LanguageRegistry.addName(ct, "Cow Stone");
+    	GameRegistry.registerBlock(ct, "Cow Stone");
+    	GameRegistry.addShapedRecipe(new ItemStack(ct, 1), 
+    			"LLL",
+    			"LLL",
+    			"LLL",
+    			'L',
+    			net.minecraft.item.Item.itemRegistry.getObjectById(334));
+    	GameRegistry.addShapedRecipe(new ItemStack((Item) net.minecraft.item.Item.itemRegistry.getObjectById(334), 9),
+    			"L  ",
+    			"   ",
+    			"   ",
+    			'L',
+    			ct);
 	}
 }
